@@ -103,6 +103,20 @@ public class PalmerPenguins {
                 System.out.println(e + ": sample = " + sample);
             }
         }
-        
+        // Test DataWrapper class
+        ArrayList<DataWrapper<Penguin>> wrapperList = new ArrayList<>();
+        // add first 8 penguins to DataWrapper list
+        for (int sample = 1; sample <= 8; sample++) {
+            Penguin penguin = analyzer.getPenguinBySampleNum(sample);
+            if (penguin != null){
+                DataWrapper<Penguin> wrappedPenguin =
+                    new DataWrapper<>(penguin);
+                wrapperList.add(wrappedPenguin);
+            }
+        }
+        // Display DataWrapper List
+        if (!wrapperList.isEmpty()) {
+           System.out.println("Data Wrapper List:");
+           DataWrapper.displayList(wrapperList);
+        } 
     }
-}
