@@ -1,9 +1,12 @@
 // PalmerPenguins.java
-// D. Singletary
-// 3/14/25
+// Latoya Smothers-Tolar
+// 08/08/2026
 // Palmer Penguins application
 
 package edu.fscj.cop2800c.penguin;
+
+import java.util.ArrayList;
+import edu.fscj.cop2800c.util.DataWrapper;
 
 public class PalmerPenguins {
     public static void main(String[] args) {
@@ -98,7 +101,7 @@ public class PalmerPenguins {
                         Penguin pNegCulmenLen = new Penguin(
                             1000 + sample, "Adelie", -1.0, 1.0, 1.0, null, 1.0);
                         break;
-                }
+               }
             } catch (InvalidBirdDataException e) {
                 System.out.println(e + ": sample = " + sample);
             }
@@ -118,5 +121,8 @@ public class PalmerPenguins {
         if (!wrapperList.isEmpty()) {
            System.out.println("Data Wrapper List:");
            DataWrapper.displayList(wrapperList);
-        } 
+        }
     }
+} 
+   
+

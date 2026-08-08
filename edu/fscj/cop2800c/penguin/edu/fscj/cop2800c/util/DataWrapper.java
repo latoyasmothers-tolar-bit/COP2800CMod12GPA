@@ -7,7 +7,7 @@ package edu.fscj.cop2800c.util;
 
 import java.util.List;
 
-public class Datawrapper<T> {
+public class DataWrapper<T> {
   private T value;
   // constuctor
   public DataWrapper() {
